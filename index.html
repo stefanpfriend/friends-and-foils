@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Friends &amp; Foils — Pokémon card shows, trades &amp; table time</title>
+<meta name="description" content="A new home for Pokémon card collectors in the Charlotte area. Shows, buy/sell/trade, and space to play — at Tabbris. Get on the list for first dates and table reservations." />
+
+<meta property="og:title" content="Friends & Foils" />
+<meta property="og:description" content="Pokémon card shows, trades, and table time — coming to the Charlotte area." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://friendsandfoils.com" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0B0E14;
+    --ink-2:#10141d;
+    --surface:#141a26;
+    --surface-2:#1a2230;
+    --line:rgba(255,255,255,.10);
+    --line-strong:rgba(255,255,255,.18);
+    --text:#EEF1F7;
+    --muted:#99A2B4;
+    --gold:#E8B341;
+    --gold-deep:#caa12f;
+
+    --display:"Bricolage Grotesque", system-ui, sans-serif;
+    --body:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:"Space Mono", ui-monospace, monospace;
+
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 75% -10%, rgba(232,179,65,.06), transparent 60%),
+      radial-gradient(900px 600px at 0% 10%, rgba(70,224,255,.05), transparent 55%),
+      var(--ink);
+    color:var(--text);
+    font-family:var(--body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  .tag{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .tag .num{color:var(--gold)}
+
+  header{position:sticky;top:0;z-index:40;backdrop-filter:blur(10px);
+    background:linear-gradient(180deg, rgba(11,14,20,.82), rgba(11,14,20,.35));
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);
+    font-weight:800;letter-spacing:-.01em;font-size:18px;text-decoration:none}
+  .brand .amp{
+    background:linear-gradient(115deg,#ff4d9d,#b57bff,#46e0ff,#9cff6b,#ffd24d);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav a.cta{display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--body);font-weight:600;font-size:14px;text-decoration:none;
+    color:var(--ink);background:var(--gold);padding:9px 16px;border-radius:999px;
+    transition:transform .15s ease, background .15s ease}
+  .nav a.cta:hover{background:#f2c45c;transform:translateY(-1px)}
+
+  .hero{position:relative;padding:64px 0 40px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hero h1{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.02em;margin:18px 0 0}
+  .hero h1 .foil{
+    background:linear-gradient(110deg,#ff4d9d 8%,#b57bff 28%,#46e0ff 48%,#9cff6b 68%,#ffd24d 88%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:foilshift 7s ease-in-out infinite}
+  @keyframes foilshift{0%,100%{background-position:0% 0}50%{background-position:100% 0}}
+  .lede{color:var(--muted);font-size:clamp(17px,2vw,20px);max-width:30ch;margin:18px 0 0}
+
+  .capture{margin-top:26px;max-width:440px}
+  .field{display:flex;gap:8px;background:var(--surface);border:1px solid var(--line-strong);
+    border-radius:14px;padding:6px;transition:border-color .15s ease}
+  .field:focus-within{border-color:var(--gold)}
+  .field input[type=email]{flex:1;min-width:0;background:transparent;border:0;outline:0;
+    color:var(--text);font-family:var(--body);font-size:16px;padding:10px 12px}
+  .field input::placeholder{color:#6f7889}
+  .field button{border:0;cursor:pointer;font-family:var(--body);font-weight:700;font-size:15px;
+    color:var(--ink);background:var(--gold);border-radius:10px;padding:0 18px;
+    transition:transform .15s ease, background .15s ease}
+  .field button:hover{background:#f2c45c}
+  .field button:active{transform:scale(.98)}
+  .vendor{display:flex;align-items:center;gap:9px;margin-top:12px;color:var(--muted);font-size:14px;cursor:pointer}
+  .vendor input{accent-color:var(--gold);width:16px;height:16px}
+  .formnote{font-size:12.5px;color:#6f7889;margin-top:10px}
+  .success{display:none;margin-top:18px;padding:16px 18px;border-radius:14px;
+    border:1px solid rgba(156,255,107,.35);background:rgba(156,255,107,.08);
+    color:#cdeec0;font-size:15px}
+  .success.show{display:block;animation:pop .4s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  .card-stage{display:flex;justify-content:center;perspective:1100px}
+  .holo{
+    position:relative;width:min(340px,78vw);aspect-ratio:63/88;border-radius:18px;
+    transform-style:preserve-3d;transition:transform .25s ease;will-change:transform;
+    background:linear-gradient(160deg,#1d2740,#0c1018);
+    border:10px solid var(--gold);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(0,0,0,.4) inset;
+    overflow:hidden}
+  .holo .inner{position:absolute;inset:10px;border-radius:10px;
+    background:radial-gradient(120% 90% at 50% 18%, #243150, #0b0f17 70%);
+    display:flex;flex-direction:column;justify-content:space-between;padding:20px;
+    border:1px solid rgba(255,255,255,.06)}
+  .holo .ftag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+  .holo .mark{font-family:var(--display);font-weight:800;font-size:clamp(28px,9vw,40px);
+    line-height:.95;letter-spacing:-.01em}
+  .holo .mark .amp2{
+    background:linear-gradient(115deg,#ff4d9d,#b57bff,#46e0ff,#9cff6b,#ffd24d);
+    background-size:180% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:foilshift 6s ease-in-out infinite}
+  .holo .sub{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em}
+  .holo .shine{position:absolute;inset:0;pointer-events:none;mix-blend-mode:color-dodge;
+    opacity:0;transition:opacity .3s ease;
+    background:radial-gradient(180px 180px at var(--mx,50%) var(--my,40%),
+        rgba(255,255,255,.55), rgba(255,255,255,0) 60%);}
+  .holo .foilsheen{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;opacity:.35;
+    background:repeating-linear-gradient(115deg,
+        rgba(255,77,157,.5) 0 12px, rgba(70,224,255,.5) 12px 24px,
+        rgba(156,255,107,.5) 24px 36px, rgba(255,210,77,.5) 36px 48px);
+    background-size:200% 200%;background-position:var(--mx,50%) var(--my,50%);
+    filter:saturate(1.4)}
+  .holo:hover .shine{opacity:1}
+
+  section{padding:72px 0}
+  .sec-head{max-width:60ch}
+  .sec-head h2{font-family:var(--display);font-weight:700;letter-spacing:-.01em;
+    font-size:clamp(28px,4vw,40px);line-height:1.05;margin:12px 0 0}
+  .sec-head p{color:var(--muted);font-size:17px;margin:14px 0 0}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  .feature{background:linear-gradient(180deg,var(--surface),var(--ink-2));
+    border:1px solid var(--line);border-radius:16px;padding:24px;
+    transition:transform .2s ease, border-color .2s ease}
+  .feature:hover{transform:translateY(-3px);border-color:var(--line-strong)}
+  .feature .ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+    background:rgba(232,179,65,.12);border:1px solid rgba(232,179,65,.3);margin-bottom:16px}
+  .feature .ico svg{width:22px;height:22px;stroke:var(--gold)}
+  .feature h3{font-family:var(--display);font-weight:700;font-size:20px;margin:0 0 6px}
+  .feature p{color:var(--muted);font-size:15px;margin:0}
+  .feature .num{font-family:var(--mono);font-size:11px;color:#5f6877;letter-spacing:.14em;display:block;margin-bottom:14px}
+
+  .soon{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+  .soon .tile{position:relative;border:1px solid var(--line);border-radius:16px;padding:28px;
+    background:radial-gradient(120% 120% at 0% 0%, rgba(70,224,255,.06), transparent 50%), var(--ink-2);overflow:hidden}
+  .soon .tile .stamp{position:absolute;top:18px;right:18px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);
+    padding:5px 10px;border-radius:999px}
+  .soon .tile h3{font-family:var(--display);font-weight:700;font-size:24px;margin:8px 0 8px}
+  .soon .tile p{color:var(--muted);margin:0;font-size:15.5px}
+
+  .band{border:1px solid var(--line);border-radius:20px;
+    background:linear-gradient(135deg, rgba(232,179,65,.10), rgba(181,123,255,.06)), var(--surface);
+    padding:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+  .band h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.5vw,34px);margin:10px 0 10px;line-height:1.05}
+  .band p{color:var(--muted);margin:0;font-size:16px;max-width:46ch}
+  .band ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .band li{display:flex;gap:11px;align-items:flex-start;font-size:15px}
+  .band li b{font-family:var(--display);color:var(--gold);font-weight:700;font-size:15px;min-width:54px}
+
+  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+  .about .big{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,30px);line-height:1.15;letter-spacing:-.01em;margin:12px 0 0}
+  .about p{color:var(--muted);font-size:16px}
+
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;margin-top:24px}
+  .foot-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+  .foot-cap .field{max-width:420px}
+  .foot-brand{font-family:var(--display);font-weight:800;font-size:22px}
+  .foot-brand .amp{background:linear-gradient(115deg,#ff4d9d,#b57bff,#46e0ff,#9cff6b,#ffd24d);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .foot-links{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px}
+  .foot-links a{color:var(--muted);text-decoration:none;font-size:14px}
+  .foot-links a:hover{color:var(--text)}
+  .legal{color:#5f6877;font-size:13px;margin-top:36px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .card-stage{order:-1}
+    .cards{grid-template-columns:1fr}
+    .soon{grid-template-columns:1fr}
+    .band{grid-template-columns:1fr;padding:28px}
+    .about{grid-template-columns:1fr;gap:18px}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    .nav a.cta{display:none}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto}
+    .holo{transform:none !important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Friends <span class="amp">&amp;</span> Foils</a>
+    <a class="cta" href="#join">Get on the list</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">No. <span class="num">001</span> · Charlotte area · est. 2026</span>
+        <h1>Friends <span class="foil">&amp;</span> Foils</h1>
+        <p class="lede">A new home for Pokémon collectors. Card shows, buy / sell / trade, and tables to actually play — coming soon to Tabbris.</p>
+
+        <form class="capture" id="capture-hero" novalidate>
+          <div class="field">
+            <input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@email.com" aria-label="Email address" required />
+            <button type="submit">Get on the list</button>
+          </div>
+          <label class="vendor">
+            <input type="checkbox" name="vendor" value="yes" />
+            I&rsquo;d want a vendor table at the first show
+          </label>
+          <p class="formnote">First show dates, table reservations, shop news &mdash; plus entry to our launch giveaway. No spam.</p>
+          <div class="success" role="status" aria-live="polite">You&rsquo;re on the list. We&rsquo;ll send first dates before anyone else.</div>
+        </form>
+      </div>
+
+      <div class="card-stage">
+        <div class="holo" id="holo" aria-hidden="true">
+          <div class="foilsheen"></div>
+          <div class="inner">
+            <div class="ftag">Holo · 1st Edition</div>
+            <div>
+              <div class="mark">Friends<br><span class="amp2">&amp;</span> Foils</div>
+              <div class="sub" style="margin-top:10px">Charlotte&nbsp;area &nbsp;·&nbsp; No.&nbsp;001</div>
+            </div>
+            <div class="sub">Shows · Trade · Play</div>
+          </div>
+          <div class="shine"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Set · <span class="num">What we&rsquo;re building</span></span>
+        <h2>Three reasons to show up.</h2>
+      </div>
+      <div class="cards">
+        <div class="feature">
+          <span class="num">001 / TBD</span>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+          <h3>Card shows</h3>
+          <p>Regular shows with 20–30 vendor tables. Vintage, modern, sealed, and slabs — all under one roof.</p>
+        </div>
+        <div class="feature">
+          <span class="num">002 / TBD</span>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M21 3l-7 7"/><path d="M8 21H3v-5"/><path d="M3 21l7-7"/></svg></div>
+          <h3>Buy · sell · trade</h3>
+          <p>Move cards face to face. Fair deals, real comps, and people who actually know the hobby.</p>
+        </div>
+        <div class="feature">
+          <span class="num">003 / TBD</span>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Space to play</h3>
+          <p>Conference rooms set up for league nights and tournaments — not just a folding table in a hallway.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="soon">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">Promo · <span class="num">On the horizon</span></span>
+        <h2>The list gets it first.</h2>
+        <p>Dates aren&rsquo;t locked yet — but everyone on the list hears before the public post goes up. Early members are entered to win our launch giveaway.</p>
+      </div>
+      <div class="soon">
+        <div class="tile">
+          <span class="stamp">Date TBD</span>
+          <h3>First show</h3>
+          <p>Our opening event at Tabbris. Vendor tables, walk-in trading, and a play area. Join the list to claim early — including table reservations for vendors.</p>
+        </div>
+        <div class="tile">
+          <span class="stamp">Coming soon</span>
+          <h3>The shop</h3>
+          <p>A retail card shop built into the space — singles, sealed, supplies, and grading help. Details when we&rsquo;re closer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vendors">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <span class="tag">For vendors · <span class="num">Reserve a table</span></span>
+          <h2>Sell where the floor is built for it.</h2>
+          <p>Tabbris is a real venue — 20–30 tables, parking, rooms for play. Tell us you&rsquo;re interested and you&rsquo;ll get first pick of tables when dates drop.</p>
+        </div>
+        <ul>
+          <li><b>Rate</b> Founding vendor price for the first show — list-only, locked before dates drop</li>
+          <li><b>Floor</b> 20–30 vendor tables</li>
+          <li><b>Play</b> Conference rooms for events</li>
+          <li><b>Access</b> List members reserve first</li>
+          <li><b>Next</b> <a href="#join" style="color:var(--gold);text-decoration:none">Join &amp; check the vendor box →</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <span class="tag">Origin · <span class="num">Why us</span></span>
+        <p class="big">Built by a collector, for collectors.</p>
+      </div>
+      <div>
+        <p>Friends &amp; Foils comes from years deep in the hobby — vintage Base Set runs, modern chase cards, grading, and knowing what a deal is actually worth. We&rsquo;re bringing that to a real space in the Charlotte area, hosted at Tabbris.</p>
+        <p>No gatekeeping, no hype tax. Just a good floor to deal, trade, and play on. Get on the list and grow it with us.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="sec-head" style="max-width:46ch">
+        <span class="tag">Join · <span class="num">Don&rsquo;t miss the first show</span></span>
+        <h2>Get dates, tables, and shop news first.</h2>
+      </div>
+      <form class="capture" id="capture-foot" novalidate style="margin-top:26px">
+        <div class="field">
+          <input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@email.com" aria-label="Email address" required />
+          <button type="submit">Get on the list</button>
+        </div>
+        <label class="vendor">
+          <input type="checkbox" name="vendor" value="yes" />
+          I&rsquo;d want a vendor table at the first show
+        </label>
+        <div class="success" role="status" aria-live="polite">You&rsquo;re on the list. We&rsquo;ll send first dates before anyone else.</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-cap">
+      <div class="foot-brand">Friends <span class="amp">&amp;</span> Foils</div>
+      <div class="foot-links">
+        <a href="#what">What we do</a>
+        <a href="#vendors">Vendors</a>
+        <a href="#join">Join</a>
+        <!-- TODO: replace # with your real handles -->
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="mailto:hello@friendsandfoils.com">hello@friendsandfoils.com</a>
+      </div>
+    </div>
+    <div>
+      <span class="tag">Venue</span>
+      <p style="color:var(--muted);font-size:15px;margin:10px 0 0">Hosted at Tabbris — Charlotte area. Exact address with the first show announcement.</p>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <span>© 2026 Friends &amp; Foils. Not affiliated with or endorsed by Nintendo, Game Freak, or The Pokémon Company.</span>
+    <span>friendsandfoils.com</span>
+  </div>
+</footer>
+
+<iframe name="ff_sink" style="display:none" title="hidden"></iframe>
+
+<script>
+/* =========================================================================
+   EMAIL CAPTURE — WIRE THIS UP (the page's whole job).
+   You use Mailchimp. In Mailchimp: Audience > Signup forms > Embedded form.
+   From the generated <form>, copy:
+     - the action URL (ends in /subscribe/post)
+     - the hidden bot field name (looks like  b_xxxxxxxx_yyyyyyyy )
+   Leave ACTION empty and the form runs in demo mode (shows success, sends nothing).
+   ========================================================================= */
+const CONFIG = {
+  ACTION: "",                 // e.g. "https://friendsandfoils.us21.list-manage.com/subscribe/post?u=ABC&id=123"
+  EMAIL_FIELD: "EMAIL",       // Mailchimp default
+  VENDOR_FIELD: "",           // optional Mailchimp merge/group field to flag vendor interest
+  BOT_FIELD: ""               // the b_xxxx_yyyy hidden field from the embed code
+};
+
+function wire(form){
+  const success = form.querySelector('.success');
+  const emailInput = form.querySelector('input[type=email]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const email = (emailInput.value || '').trim();
+    const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!ok){ emailInput.focus(); emailInput.style.color = '#ff8c8c'; return; }
+    emailInput.style.color = '';
+    const vendor = form.querySelector('input[name=vendor]') && form.querySelector('input[name=vendor]').checked;
+    if(CONFIG.ACTION){
+      const real = document.createElement('form');
+      real.action = CONFIG.ACTION; real.method = 'POST'; real.target = 'ff_sink';
+      real.style.display = 'none';
+      const add = function(n,v){ if(!n) return; const i=document.createElement('input'); i.name=n; i.value=v; real.appendChild(i); };
+      add(CONFIG.EMAIL_FIELD, email);
+      if(vendor) add(CONFIG.VENDOR_FIELD, 'yes');
+      if(CONFIG.BOT_FIELD) add(CONFIG.BOT_FIELD, '');
+      document.body.appendChild(real);
+      real.submit();
+    }
+    success.classList.add('show');
+    emailInput.value = '';
+    const cb = form.querySelector('input[name=vendor]'); if(cb) cb.checked = false;
+  });
+}
+document.querySelectorAll('form.capture').forEach(wire);
+
+/* HOLO CARD — tilt + light-follow on pointer move. Skipped on touch / reduced-motion. */
+(function(){
+  const holo = document.getElementById('holo');
+  if(!holo) return;
+  const finePointer = window.matchMedia('(pointer:fine)').matches;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!finePointer || reduce) return;
+  const stage = holo.parentElement;
+  const shine = holo.querySelector('.shine');
+  const sheen = holo.querySelector('.foilsheen');
+  function move(e){
+    const r = holo.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const rx = (0.5 - py) * 16;
+    const ry = (px - 0.5) * 18;
+    holo.style.transform = 'rotateX('+rx+'deg) rotateY('+ry+'deg)';
+    const mx = (px*100).toFixed(1)+'%', my = (py*100).toFixed(1)+'%';
+    shine.style.setProperty('--mx', mx);
+    shine.style.setProperty('--my', my);
+    sheen.style.backgroundPosition = mx+' '+my;
+  }
+  function reset(){ holo.style.transform = 'rotateX(0) rotateY(0)'; }
+  stage.addEventListener('pointermove', move);
+  stage.addEventListener('pointerleave', reset);
+})();
+</script>
+</body>
+</html>

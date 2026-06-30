@@ -1,6 +1,6 @@
 # Friends &amp; Foils
 
-Landing page for **Friends &amp; Foils** — Pokémon card shows, buy/sell/trade, and table time, coming to the Charlotte area (hosted at Tabbris).
+Landing page for **Friends &amp; Foils** — trading card game shows, buy/sell/trade, and table time (Pokémon, Magic, Lorcana, One Piece and more), coming to the Charlotte area (hosted at Tabbris).
 
 Live at: <https://friendsandfoils.com>
 

@@ -393,18 +393,18 @@
 
 <script>
 /* =========================================================================
-   EMAIL CAPTURE — WIRE THIS UP (the page's whole job).
-   You use Mailchimp. In Mailchimp: Audience > Signup forms > Embedded form.
-   From the generated <form>, copy:
-     - the action URL (ends in /subscribe/post)
-     - the hidden bot field name (looks like  b_xxxxxxxx_yyyyyyyy )
-   Leave ACTION empty and the form runs in demo mode (shows success, sends nothing).
+   EMAIL CAPTURE — wired to Buttondown (the page's whole job).
+   Newsletter: buttondown.com/friendsandfoils
+   Submissions POST to Buttondown's embed-subscribe endpoint. The vendor
+   checkbox is sent as a Buttondown tag ("vendor-interest").
+   Leave ACTION empty to run in demo mode (shows success, sends nothing).
    ========================================================================= */
 const CONFIG = {
-  ACTION: "",                 // e.g. "https://friendsandfoils.us21.list-manage.com/subscribe/post?u=ABC&id=123"
-  EMAIL_FIELD: "EMAIL",       // Mailchimp default
-  VENDOR_FIELD: "",           // optional Mailchimp merge/group field to flag vendor interest
-  BOT_FIELD: ""               // the b_xxxx_yyyy hidden field from the embed code
+  ACTION: "https://buttondown.com/api/emails/embed-subscribe/friendsandfoils",
+  EMAIL_FIELD: "email",             // Buttondown expects "email"
+  VENDOR_FIELD: "tag",              // Buttondown tag field; value set below
+  VENDOR_VALUE: "vendor-interest",  // tag applied when the vendor box is checked
+  BOT_FIELD: ""                     // Buttondown needs no bot field
 };
 
 function wire(form){
@@ -418,12 +418,19 @@ function wire(form){
     emailInput.style.color = '';
     const vendor = form.querySelector('input[name=vendor]') && form.querySelector('input[name=vendor]').checked;
     if(CONFIG.ACTION){
+      // Hidden iframe swallows the cross-origin response so the POST is silent
+      // and the in-page success message can show instead of navigating away.
+      if(!document.querySelector('iframe[name=ff_sink]')){
+        const f = document.createElement('iframe');
+        f.name = 'ff_sink'; f.style.display = 'none';
+        document.body.appendChild(f);
+      }
       const real = document.createElement('form');
       real.action = CONFIG.ACTION; real.method = 'POST'; real.target = 'ff_sink';
       real.style.display = 'none';
       const add = function(n,v){ if(!n) return; const i=document.createElement('input'); i.name=n; i.value=v; real.appendChild(i); };
       add(CONFIG.EMAIL_FIELD, email);
-      if(vendor) add(CONFIG.VENDOR_FIELD, 'yes');
+      if(vendor) add(CONFIG.VENDOR_FIELD, CONFIG.VENDOR_VALUE);
       if(CONFIG.BOT_FIELD) add(CONFIG.BOT_FIELD, '');
       document.body.appendChild(real);
       real.submit();

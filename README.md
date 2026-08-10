@@ -14,15 +14,20 @@ HTML that links one shared stylesheet and one shared script.
 ## Structure
 
 ```
-/                     index.html          Home / hub
-/play-space/         index.html          Events, trade/play nights, conference rooms (flagship)
-/buy-sell-trade/      index.html          Face-to-face buy / sell / trade
-/card-shows/          index.html          Card shows + vendor info
+/                     index.html          Home — open-shop hub (Visit the Shop, What's in the case)
+/buy-sell-trade/      index.html          Face-to-face buy / sell / trade at the counter
+/events/              index.html          Events hub — trade nights, card shows, play & league
+/play-space/          index.html          Dedicated play rooms + event space
+/card-shows/          index.html          Redirect → /events/#shows (folded into Events)
+/spaced-play/         index.html          Redirect → /play-space/ (legacy name)
 /giveaway/            index.html          Launch giveaway (30th Anniversary Pokémon ETB)
-/giveaway/rules/      index.html          Official Rules for the giveaway
+/giveaway/rules/      index.html          Official Rules for the giveaway (attorney-reviewed)
 /assets/styles.css                        Shared design system (single source of truth)
 /assets/app.js                            Shared behavior: email capture, holo card, mobile nav
 /assets/img/                              Venue photography + prize/OG images
+
+Nav (4 items): Visit the Shop (home #visit anchor) · Buy · Sell · Trade · Events · Giveaway.
+Shop NAP (footer, every page): 1300 South Blvd, Charlotte, NC 28203 (inside Tabbris), Mon–Fri 9–5.
 ```
 
 The header nav and footer are duplicated as static HTML in each page (no build step =

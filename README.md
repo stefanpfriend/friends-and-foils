@@ -1,39 +1,63 @@
-# Friends &amp; Foils
+# Friends & Foils
 
-Landing page for **Friends &amp; Foils** — trading card game shows, buy/sell/trade, and table time (Pokémon, Magic, Lorcana, One Piece and more), coming to the Charlotte area (hosted at Tabbris).
+Website for **Friends & Foils** — trading card game shows, buy/sell/trade, and table
+time (Pokémon, Magic, Lorcana, One Piece and more), coming to the Charlotte area
+(hosted at Tabbris).
 
 Live at: <https://friendsandfoils.com>
 
 ## What this is
 
-A single static `index.html` — no build step, no dependencies. Its whole job is to
-capture emails for first show dates, table reservations, and shop news.
+A small static site — no build step, no dependencies. Every page is hand-written
+HTML that links one shared stylesheet and one shared script.
+
+## Structure
+
+```
+/                     index.html          Home / hub
+/spaced-play/         index.html          Events, trade/play nights, conference rooms (flagship)
+/buy-sell-trade/      index.html          Face-to-face buy / sell / trade
+/card-shows/          index.html          Card shows + vendor info
+/giveaway/            index.html          Launch giveaway (30th Anniversary Pokémon ETB)
+/giveaway/rules/      index.html          Official Rules for the giveaway
+/assets/styles.css                        Shared design system (single source of truth)
+/assets/app.js                            Shared behavior: email capture, holo card, mobile nav
+/assets/img/                              Venue photography + prize/OG images
+```
+
+The header nav and footer are duplicated as static HTML in each page (no build step =
+no server-side includes). If you change a nav or footer link, update it in every
+page. Styling and JS are shared, so those change in one place.
+
+## Giveaway — before it goes live
+
+`/giveaway/` and `/giveaway/rules/` are built as a **giveaway / sweepstakes** (not a
+"raffle" — in NC that term is reserved for nonprofits). Both pages contain highlighted
+`[confirm: …]` placeholders (cap, per-entry price, dates, ARV, sponsor entity,
+eligibility). Fill every one, then have a North Carolina attorney review the Official
+Rules before publishing. Keep the "no purchase necessary" and equal-odds language.
 
 ## Email capture
 
-The signup forms run in **demo mode** until wired to Mailchimp. To go live:
+The signup forms POST to **Buttondown** (`buttondown.com/friendsandfoils`). Config
+lives in the `CONFIG` block at the top of `assets/app.js`:
 
-1. In Mailchimp: **Audience → Signup forms → Embedded form**.
-2. From the generated `<form>`, copy the action URL (ends in `/subscribe/post`) and
-   the hidden bot field name (looks like `b_xxxxxxxx_yyyyyyyy`).
-3. Fill in the `CONFIG` block near the bottom of `index.html`:
-   - `ACTION` — the action URL
-   - `BOT_FIELD` — the `b_xxxx_yyyy` field
-   - `VENDOR_FIELD` — (optional) a merge/group field to flag vendor interest
-
-With `ACTION` empty, the form shows the success message but sends nothing.
+- `ACTION` — Buttondown embed-subscribe endpoint (leave empty for demo mode: shows the
+  success message but sends nothing)
+- `VENDOR_FIELD` / `VENDOR_VALUE` — Buttondown tag applied when the vendor box is checked
 
 ## Hosting
 
-Deployed via **GitHub Pages** from the `main` branch. The `CNAME` file binds the
-custom domain `friendsandfoils.com`; `.nojekyll` disables Jekyll processing so the
-file is served as-is.
+Deployed via **GitHub Pages** from the `main` branch. The `CNAME` file binds the custom
+domain `friendsandfoils.com`; `.nojekyll` disables Jekyll processing so files are served
+as-is.
 
 ## Local preview
-
-Open `index.html` directly in a browser, or:
 
 ```sh
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
+
+Use the server (not `file://`) so the absolute `/assets/…` and `/spaced-play/` paths
+resolve.

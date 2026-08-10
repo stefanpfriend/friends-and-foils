@@ -15,7 +15,7 @@ HTML that links one shared stylesheet and one shared script.
 
 ```
 /                     index.html          Home / hub
-/spaced-play/         index.html          Events, trade/play nights, conference rooms (flagship)
+/play-space/         index.html          Events, trade/play nights, conference rooms (flagship)
 /buy-sell-trade/      index.html          Face-to-face buy / sell / trade
 /card-shows/          index.html          Card shows + vendor info
 /giveaway/            index.html          Launch giveaway (30th Anniversary Pokémon ETB)
@@ -59,5 +59,5 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-Use the server (not `file://`) so the absolute `/assets/…` and `/spaced-play/` paths
+Use the server (not `file://`) so the absolute `/assets/…` and `/play-space/` paths
 resolve.

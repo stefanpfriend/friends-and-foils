@@ -219,12 +219,13 @@ a.feature:hover .go{gap:10px}
 .media.hero-shot{aspect-ratio:16/10}
 .media.ratio-4-3{aspect-ratio:4/3}
 .media.ratio-3-4{aspect-ratio:3/4}
-.visit-photo{margin-bottom:22px}
+.visit-photo{margin-top:22px}
 .gallery{display:grid;grid-template-columns:2fr 1fr;grid-auto-rows:1fr;gap:14px;margin-top:40px}
 .gallery .media:first-child{grid-row:span 2}
 .gallery .media{aspect-ratio:auto;min-height:180px}
-.inside{display:grid;grid-template-columns:1.45fr 1fr .78fr;gap:14px;margin-top:28px;align-items:start}
-.inside .media{min-width:0;min-height:0}
+.inside{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px;align-items:start}
+.inside .media{min-width:0}
+.inside .portrait{grid-column:1 / -1;width:min(420px,100%);justify-self:center}
 /* graceful placeholder shown until a real photo is dropped in */
 .ph{position:relative;display:grid;place-items:center;min-height:200px;
   background:
@@ -319,6 +320,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;margin-top:24px}
   .gallery{grid-template-columns:1fr}
   .gallery .media:first-child{grid-row:auto}
   .inside{grid-template-columns:1fr}
+  .inside .portrait{width:100%}
   .foot-grid{grid-template-columns:1fr;gap:28px}
 
   /* mobile nav */

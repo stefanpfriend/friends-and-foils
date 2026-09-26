@@ -238,6 +238,11 @@ a.feature:hover .go{gap:10px}
 .chip.gold{color:var(--ink);background:var(--gold);border-color:transparent;font-weight:700}
 
 /* ---- Giveaway -------------------------------------------------------- */
+.ended-notice{
+  margin:0 0 22px;padding:16px 20px;border-radius:16px;
+  border:1px solid rgba(232,179,65,.45);background:rgba(232,179,65,.10);
+  font-family:var(--display);font-weight:700;font-size:clamp(17px,2vw,20px);
+  line-height:1.3;color:var(--text)}
 .prize{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center}
 .prize .media{aspect-ratio:1/1;background:linear-gradient(180deg,#ffffff,#e7eaf0)}
 .prize .media img{object-fit:contain;padding:7%}

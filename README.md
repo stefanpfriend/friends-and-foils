@@ -27,7 +27,7 @@ HTML that links one shared stylesheet and one shared script.
 /assets/img/                              Venue photography + prize/OG images
 
 Nav (4 items): Visit the Shop (home #visit anchor) · Buy · Sell · Trade · Events · Giveaway.
-Shop NAP (footer, every page): 1300 South Blvd, Charlotte, NC 28203 (inside Tabbris), Mon–Fri 9–5.
+Shop NAP (footer, every page): 1300 South Blvd, Suite D, Charlotte, NC 28203 (inside Tabbris), Monday–Friday, 10 AM–5 PM.
 ```
 
 The header nav and footer are duplicated as static HTML in each page (no build step =

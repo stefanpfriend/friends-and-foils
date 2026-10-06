@@ -20,7 +20,7 @@ HTML that links one shared stylesheet and one shared script.
 /play-space/          index.html          Dedicated play rooms + event space
 /card-shows/          index.html          Redirect → /events/#shows (folded into Events)
 /spaced-play/         index.html          Redirect → /play-space/ (legacy name)
-/giveaway/            index.html          Launch giveaway (30th Anniversary Pokémon ETB)
+/giveaway/            index.html          Recap of first giveaway (ended; winner Josh)
 /giveaway/rules/      index.html          Official Rules for the giveaway (attorney-reviewed)
 /assets/styles.css                        Shared design system (single source of truth)
 /assets/app.js                            Shared behavior: email capture, holo card, mobile nav

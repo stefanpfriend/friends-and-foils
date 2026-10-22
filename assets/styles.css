@@ -245,7 +245,10 @@ a.feature:hover .go{gap:10px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .chip{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--text);
   background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;padding:8px 14px}
+a.chip{text-decoration:none}
+a.chip:hover{border-color:var(--gold)}
 .chip.gold{color:var(--ink);background:var(--gold);border-color:transparent;font-weight:700}
+a.chip.gold:hover{color:var(--ink)}
 
 /* ---- Giveaway -------------------------------------------------------- */
 .ended-notice{

@@ -83,3 +83,10 @@ submission, payment, real entry or prize draw was performed.
 Before tag distribution, rollback is the previous main commit 73926ab. After
 printed tags are distributed, keep the issued manifest and `/holiday-hunt/found/`
 route available even if other campaign presentation is rolled back.
+
+## Published teaser
+
+The dates-only teaser is published by PR #10 (main 6cc6405). This draft branch
+retains the complete offer/lookup/rules preview; it must not replace the teaser
+until the remaining promotion decisions and final rules review are complete.
+Home and Events retain the published coming-soon wording during that review.

@@ -67,6 +67,17 @@ python3 -m http.server 8000
 Use the server (not `file://`) so the absolute `/assets/…` and `/play-space/` paths
 resolve.
 
+## Holiday Hunt teaser
+
+`/holiday-hunt/` announces the Nov 27–Dec 9, 2026 dates and Dec 9 trade-night finale.
+Home and Events link to the teaser. `/holiday-hunt/found/` displays the same
+coming-soon information for early QR scans; it does not validate a code.
+
+The prize offer, entry mechanics, rules draft, code lookup manifest and browser
+passport remain in draft PR #9. Do not publish those until the outstanding
+promotion decisions and final rules review are complete. This teaser uses only
+the existing shared script; it has no entry form or hunt data collection.
+
 ## Holiday Hunt (build preview)
 
 `/holiday-hunt/` contains the holiday campaign, `/holiday-hunt/found/#CODE` checks a
@@ -74,8 +85,8 @@ tag, and `/holiday-hunt/rules/` contains the updated rules draft. Home and Event
 link to it. The checklist is browser-local; entries and household spins are checked
 at the physical counter, not registered online.
 
-The prize/sponsor/contact fields are still highlighted for confirmation. Keep the
-preview out of production until the final rules and existing giveaway launch
+The prize/sponsor/contact fields are still highlighted for confirmation. Production currently serves the dates-only teaser. Keep this branch’s full
+promotion out of production until the final rules and existing giveaway launch
 requirements above are resolved. Do not commit or publish the private master code
 inventory, QR print kit or counter ledger.
 

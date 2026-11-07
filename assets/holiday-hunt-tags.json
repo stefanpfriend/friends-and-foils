@@ -1,0 +1,406 @@
+{
+  "campaign": "ff-holiday-2026",
+  "inventoryId": "fe4cffa8-c61c-4ddf-9dfe-92cfdb9ed2ce",
+  "tags": [
+    {
+      "hash": "94d2becd6dfaee6ddf1f475be6136b53f0905e04aec3d9cbaab6def6269e2149",
+      "species": "pikachu"
+    },
+    {
+      "hash": "a5d3c1e89999c1e65ff522e6672962d44dae0c82e6158ea311854669a65f0a24",
+      "species": "pikachu"
+    },
+    {
+      "hash": "653fd1fdba1edef25a4d78adc410a156b8e510e7cf1fd6759aa769b1e22e3331",
+      "species": "pikachu"
+    },
+    {
+      "hash": "b0d28f5a5c77382a1fadc6614cbbc759a8a9d795c0aafbe263c426898f8cb624",
+      "species": "pikachu"
+    },
+    {
+      "hash": "ac8a5dc1fe2b2f2b0bb0b37dd2aa50bb03d465713947264989f76f02683680ae",
+      "species": "pikachu"
+    },
+    {
+      "hash": "2ef5966f8f87ef2347e618bc553b82728164b29d82cc02eb2d9eddc66ded94ff",
+      "species": "pikachu"
+    },
+    {
+      "hash": "cdeaedd9ddbea6dee0ee31838110b66b4d55f2be64d5bf24971053dad13c706a",
+      "species": "pikachu"
+    },
+    {
+      "hash": "0c9be6d071c8fa362b52f85a5c96739d23c380aeb36cfd976a568ab096e21ca6",
+      "species": "pikachu"
+    },
+    {
+      "hash": "a750f7f72a9774df44bfac61893031b2c549659c85f39f60b3d55ebfa3e49230",
+      "species": "pikachu"
+    },
+    {
+      "hash": "2e04570119846515dfceaf317377018fb5786de6468c580be5d1e9d7927250c1",
+      "species": "pikachu"
+    },
+    {
+      "hash": "ab4285ad4f2396f72a3cf4402aed8e8a989dc4d03400270401dd58cf6a4434a3",
+      "species": "pikachu"
+    },
+    {
+      "hash": "178e83206a68ef81b1aeb68f550e948fa2e960648e7fd3d08520ff1424e0d725",
+      "species": "pikachu"
+    },
+    {
+      "hash": "c5055694d16d59854b3a7e1fe22297a30be5a53b1bae765caaedb97f92eff359",
+      "species": "pikachu"
+    },
+    {
+      "hash": "d366f361bb2b918cb6bd7c95b0177f2bed0aa154443a6666515d5dfd8d0dc893",
+      "species": "pikachu"
+    },
+    {
+      "hash": "8e746efd36281f33478908bb44a92efc5c23dc77b9a48fca5cfef501056b861b",
+      "species": "pikachu"
+    },
+    {
+      "hash": "03ae6107acf24f1feffcf436dce57d4f5d6a66bc805439e601efec14e6daa16d",
+      "species": "pikachu"
+    },
+    {
+      "hash": "5f165c237166fbde22a319ec023c44f7075f802991c6a64b5371310fa37e2fa8",
+      "species": "pikachu"
+    },
+    {
+      "hash": "2adfd31530200f0613937977503b965a75c3f3fedb137ee8f5a1ae94ce3321a0",
+      "species": "pikachu"
+    },
+    {
+      "hash": "782aed6e0f500aafc1600e9feb9fb46dcb24012d0dfd4a7c5a34c789de7bd90d",
+      "species": "pikachu"
+    },
+    {
+      "hash": "152bc4f3254ce982f8a114192ba6b50a68d1fc7c959e21f4f83287182d02930b",
+      "species": "pikachu"
+    },
+    {
+      "hash": "ae0b499748d2e71aafceed72aac562a5108f88a7e7dbadaf94b7984313f7db79",
+      "species": "pikachu"
+    },
+    {
+      "hash": "73b0c733569f496849bc59a1f610fe880bb208a4608fb20a2d61d7f45e2c9247",
+      "species": "pikachu"
+    },
+    {
+      "hash": "c4f9c53024b6635436fb26941daa34800ba2dc05485ece2ddf25b8289071acf9",
+      "species": "pikachu"
+    },
+    {
+      "hash": "59991fa112c2307949443cebd6e3503ffbe021a5a7c4b87b7d43f0a0b3c7d7aa",
+      "species": "pikachu"
+    },
+    {
+      "hash": "f3ed41406253c12f69fe1553b57f7b0cd80e306bd4ddfbf3f648b64a06c0771d",
+      "species": "pikachu"
+    },
+    {
+      "hash": "9ef244ac8a652e74574340a2c2df5c650f62ba5c1a8435b6e74e82dcddbf2e3e",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "33929fec52f1ae33574520e1be52f48bdfac168b5a9bc7c633a50bd77cbab1d6",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "7a7c53e6dc17cfadd8eacc1ba230586bcd2757f7bc4c163bd31ddcf2a87c1002",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "b69fd21e2d80d2763f378c8c2f9663a01e35d28e702dcc8898de4d637f864058",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "50bb33e991bb8a79def6fc1dfcc458915da53866c5c8de83a1f4b73c0cdbd8ca",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "e21163d8aa6404d81abaafe2fb533dd2155a7115bef29312d4be2f1e4b6ed281",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "ea819f6e211d62808ac765969911e53ee2170a2189c343ad6f54854b1d4ac7c7",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "45564ca242b38314a3892276353dc17703bdfc8c5ac9ad4f7d91649df51a1f43",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "8e57095636bcb57081a8013028b8d4e1c2994949416ce68133f450d801f99ada",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "632e3c575f42947401e757791a394ab0c4274f0cf086899207b6148419526087",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "e4adfa785d39890ca983db0d8d11f4446c10581ee140e779ea06b49f0abd455c",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "c64562a9f14d7330e049f17566abd2b8b8e4f8ee3576271edf3b48a2bd257d2d",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "07b35e60bf6743ad79fdef2fa0ad0a9894aa609a83f9d83f0f9032b9ef9a7663",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "53f49f438f5da9228b7088d2f0136f1352e05be18f174a3bb5021dad01df6c42",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "21d9947cf3311aba92d5a130eb241ca1c2a554ab08c6880fd81de14ed47465f5",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "9a1852e2e78e13a663b756aedcfb2e4e764bccb142794edd1404c8b28c0ea340",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "0c60c4e8e613031506e8df0d35912ebe4d7eb988e74e1d40c7a95c95d89a4fa2",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "9a78cc376cde1204b23bac7fc35007ba90efb376485b30a0c121f6fae4ed3210",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "81ddd19509e3210fd0a5035c16c57d13cd1d24d54cd12880c596252f0f3e2762",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "bd45bab50cdb44444e2c2025eb1251455aae77b61ebd980a23f548fdcb11bc11",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "9d9aeced694ad5d30c8d1f0991a5e27a6916054f1b21df078d98dee173523996",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "70f6876afe5e4d93590c15ab6d00686aab94e5a7a481ab6c842994a7d55f2bfa",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "cf434dfdd838dc891445a5b421f70482f040e6ef76c89c5a9e09aa15beb787fe",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "c3cf01ae1223501efc4a54255fc7e7ad18805dee40a06969466f62687f374646",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "9eb4a00e476ac5d81246ad6d5a0501eda6da3020a7c3a63b4c942829bb73e0bc",
+      "species": "bulbasaur"
+    },
+    {
+      "hash": "38b0e83dbb8f271fb4f6e2d5b2e180b670b09394c28c05033bedf23e40fc486e",
+      "species": "charmander"
+    },
+    {
+      "hash": "7c5a40e40ba8a8bd6c1169ead615e0db023f5b0ebb0c8f8ced4fe9a6979f2f4c",
+      "species": "charmander"
+    },
+    {
+      "hash": "a3cc97a6649cbb40cafd25e8159116254218df3db7e13057acd980ccb1f19783",
+      "species": "charmander"
+    },
+    {
+      "hash": "b07f520c739b643e4d98f2a6305ed19d6aba87b7490ca46448be13786196f2ae",
+      "species": "charmander"
+    },
+    {
+      "hash": "d14e7f1acdb3123a688daa7e90c4a0ac48f651570371bbd200a041bc461a579f",
+      "species": "charmander"
+    },
+    {
+      "hash": "c2777a2838b58ccb092826ec0f2a05f9b83282a9722e7c56a1620b7ba5eef4d6",
+      "species": "charmander"
+    },
+    {
+      "hash": "e9bc8ec876faa0ad9d8c1148e74684d52eddad733d18aa29c09a4f30326a7dc5",
+      "species": "charmander"
+    },
+    {
+      "hash": "e7541ceccad7472b3d24bb770ed5a22a862764da83128954f0e95581ea5a4305",
+      "species": "charmander"
+    },
+    {
+      "hash": "c1199a6af498bbca5fe85702b0a43437f9ee8d489810bc5ee2c0d3065abc0196",
+      "species": "charmander"
+    },
+    {
+      "hash": "4f38a0227cb7df4e8bf8aae9253ca0e08fc20e099082d77dc91e2b6497caf8bb",
+      "species": "charmander"
+    },
+    {
+      "hash": "833851e4b720abef8029ba2863e863b8f12b2c447367387a56aa7339646be4ea",
+      "species": "charmander"
+    },
+    {
+      "hash": "c5753d347e0b4a23544a5a387821fc007e6490786580379c63cb93f04772377b",
+      "species": "charmander"
+    },
+    {
+      "hash": "01b9d16875221219e4610f4b742f56318e4450a772460ba6d124390d7a8c2c8d",
+      "species": "charmander"
+    },
+    {
+      "hash": "ffea04ba73d4e1979f5a6c4ccc5b30983d6ab8a20fdfbbcbae7348363ba7f607",
+      "species": "charmander"
+    },
+    {
+      "hash": "f661a622fa9eb7270689e163c6e8fbdc713ae64508005ab46998d7159c7cdd96",
+      "species": "charmander"
+    },
+    {
+      "hash": "1f99f6a4002daab6ce3822d96b3ee42f1c50ffd1b505fe0b26823b973ca1da57",
+      "species": "charmander"
+    },
+    {
+      "hash": "0c8add14a0cb57df99d02fcb1e4282d80f8a067b61067462997b7e60661e4eef",
+      "species": "charmander"
+    },
+    {
+      "hash": "c397ffeef89ed952b417b769c5e5149dffebffb6708cd799e5eb5dfb0e9c79b4",
+      "species": "charmander"
+    },
+    {
+      "hash": "1f77a10cb512da68722adb3951541f480d32c5f67573b1410e8a82ca74738a46",
+      "species": "charmander"
+    },
+    {
+      "hash": "265121294838ef446d66f5ae4353be7852e34b318ea5859bf0d1fa0769349e1c",
+      "species": "charmander"
+    },
+    {
+      "hash": "12d8121816084b6f10b062ba9238e4b2288d92a3d78d9c961fbdfcd3efaa28a8",
+      "species": "charmander"
+    },
+    {
+      "hash": "e2f5efe5c6a7bd9d800d391b180643a9b3a01d7839d42e0206f40f0fd7b68e4d",
+      "species": "charmander"
+    },
+    {
+      "hash": "1407af5f1dcf4c7a6b64f769abae23cc24e3d346e2f44f9e69cced47d351799a",
+      "species": "charmander"
+    },
+    {
+      "hash": "2808f41e48e22f32f21b9d5d9421bf4d48452a73a8f91459097a194e2024d8cf",
+      "species": "charmander"
+    },
+    {
+      "hash": "c573c519eaf1eef45d087ef510c15b619fbc91b21d71ecbb5df87bcd2b2ccdee",
+      "species": "charmander"
+    },
+    {
+      "hash": "31b6ec8beadcdea960dc47e33a8f0a3b351c976a784fd95be1338771c014616c",
+      "species": "squirtle"
+    },
+    {
+      "hash": "590190ad3f2ec7cb11ef003983c8a95c5f181ae4208b48af3841c67a72d97d41",
+      "species": "squirtle"
+    },
+    {
+      "hash": "757275fe6b563b7c93c5ce36936e397b643c0b610e602b30bae9e0646f84245d",
+      "species": "squirtle"
+    },
+    {
+      "hash": "bf4016df887061c2845b68e34312fa62b6488cc7005aeb4520b5410a66c1bd6e",
+      "species": "squirtle"
+    },
+    {
+      "hash": "96ad6e9074d573028ce8ad8757d3ab2298a5b9df774c4316087fd99d414b9fda",
+      "species": "squirtle"
+    },
+    {
+      "hash": "cefef136c3504ff391df4f574bfda5433329fccf83905a853469a03fcd8e4a11",
+      "species": "squirtle"
+    },
+    {
+      "hash": "89b30e79e6aef80c450cdd2237db6cbd0996d50d65ff8923b42b2d463f049810",
+      "species": "squirtle"
+    },
+    {
+      "hash": "b6d223d9388e3fbbff5266fd6e8b482555ffc939a5d8d83f354414f30380abaa",
+      "species": "squirtle"
+    },
+    {
+      "hash": "07d34471d3bb3c2356f18e760d0a102a7cf7015ae105bebd712db506acf2ada3",
+      "species": "squirtle"
+    },
+    {
+      "hash": "462e645cceed44ff584663d4d1c5e612eda35bd2a2de8be9c7bc5b05b7b62685",
+      "species": "squirtle"
+    },
+    {
+      "hash": "5216039175151e0dfd3f741edd5c98df3c6ed243f57068fd3dc5febcd3d01c3a",
+      "species": "squirtle"
+    },
+    {
+      "hash": "9e6ebe6b5a0eb41655c2b602c56f12f51316ecae4657e63e001db9ed129a681b",
+      "species": "squirtle"
+    },
+    {
+      "hash": "bcdc1248478bff09650bac55b770062c1385171d8454fab73200b1580e0dbc2a",
+      "species": "squirtle"
+    },
+    {
+      "hash": "25c96a70582f74b918e1897f9cb4c186a17535a01244e51673aef730326915f2",
+      "species": "squirtle"
+    },
+    {
+      "hash": "f4a112c5187450950c47c31804e16b5f5821e45eaf5534583f9d41e2baecccc5",
+      "species": "squirtle"
+    },
+    {
+      "hash": "2d7e003f541d45124b83d262880c6a5b1ee8cbdc8b0522f4c155d75850c9b3fa",
+      "species": "squirtle"
+    },
+    {
+      "hash": "3a991a9c2453a45b2ed80e794969e239bc65b06ffd7a5abc490cc9d7117149f3",
+      "species": "squirtle"
+    },
+    {
+      "hash": "09268d0e77efabb4dffb02bdf750d423b0eb2ae5638564f7f3187cf4d458808a",
+      "species": "squirtle"
+    },
+    {
+      "hash": "38a6cb9a2b2d55bda7313ef6c8fa22b828ee76ec848282e3ced2bb741b6e8939",
+      "species": "squirtle"
+    },
+    {
+      "hash": "f5e3ff615224ad54247b56eaf565da09e849703c734fffa5cb5dda63b6018762",
+      "species": "squirtle"
+    },
+    {
+      "hash": "25d58c69e94352c0b72d573edd571080c7cf4f364305e07a520a241d323f9411",
+      "species": "squirtle"
+    },
+    {
+      "hash": "eabaf6fd8ddbb6d75473c365b62d9073822df25396ce02cd6e45cfa88222698f",
+      "species": "squirtle"
+    },
+    {
+      "hash": "8b17c8070a376da24595ef6693006918f191778224caa6080946985af5a23c27",
+      "species": "squirtle"
+    },
+    {
+      "hash": "6a85d27837fcc0329461a4ebeb53621d6cffb9665e64f48dc5a06a6676e5163a",
+      "species": "squirtle"
+    },
+    {
+      "hash": "63a7a768fec49d95aeaa15b3cfca515da3473f1f18fd7fc9719488a81213d890",
+      "species": "squirtle"
+    }
+  ]
+}

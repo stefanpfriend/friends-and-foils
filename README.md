@@ -66,3 +66,18 @@ python3 -m http.server 8000
 
 Use the server (not `file://`) so the absolute `/assets/…` and `/play-space/` paths
 resolve.
+
+## Holiday Hunt (build preview)
+
+`/holiday-hunt/` contains the holiday campaign, `/holiday-hunt/found/#CODE` checks a
+tag, and `/holiday-hunt/rules/` contains the updated rules draft. Home and Events
+link to it. The checklist is browser-local; entries and household spins are checked
+at the physical counter, not registered online.
+
+The prize/sponsor/contact fields are still highlighted for confirmation. Keep the
+preview out of production until the final rules and existing giveaway launch
+requirements above are resolved. Do not commit or publish the private master code
+inventory, QR print kit or counter ledger.
+
+See [build, verification and print handoff](docs/holiday-hunt-build.md).
+Run the small behavior checks with `node --test tests/holiday-hunt.test.mjs`.

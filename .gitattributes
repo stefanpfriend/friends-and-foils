@@ -1,0 +1,2 @@
+# iCalendar requires CRLF. Preserve those bytes while retaining normal whitespace checks.
+assets/holiday-hunt-finale.ics -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

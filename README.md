@@ -66,3 +66,14 @@ python3 -m http.server 8000
 
 Use the server (not `file://`) so the absolute `/assets/…` and `/play-space/` paths
 resolve.
+
+## Holiday Hunt teaser
+
+`/holiday-hunt/` announces the Nov 27–Dec 9, 2026 dates and Dec 9 trade-night finale.
+Home and Events link to the teaser. `/holiday-hunt/found/` displays the same
+coming-soon information for early QR scans; it does not validate a code.
+
+The prize offer, entry mechanics, rules draft, code lookup manifest and browser
+passport remain in draft PR #9. Do not publish those until the outstanding
+promotion decisions and final rules review are complete. This teaser uses only
+the existing shared script; it has no entry form or hunt data collection.

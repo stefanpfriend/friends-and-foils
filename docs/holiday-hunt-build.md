@@ -80,13 +80,21 @@ Physical devices, Safari, a real printed-camera scan, in-person counter operatio
 prize stock and legal approval are not verified. No production deployment, list
 submission, payment, real entry or prize draw was performed.
 
-Before tag distribution, rollback is the previous main commit 73926ab. After
+Before full-promotion approval, keep the published teaser (main 0d11c4b). The
+festive-energy presentation can be rolled back to the prior teaser 6cc6405. After
 printed tags are distributed, keep the issued manifest and `/holiday-hunt/found/`
 route available even if other campaign presentation is rolled back.
 
 ## Published teaser
 
-The dates-only teaser is published by PR #10 (main 6cc6405). This draft branch
+The dates-only teaser was published by PR #10; PR #11 adds festive energy names
+and red/green styling (main 0d11c4b). This draft branch
 retains the complete offer/lookup/rules preview; it must not replace the teaser
 until the remaining promotion decisions and final rules review are complete.
 Home and Events retain the published coming-soon wording during that review.
+
+The November 8 label change keeps the original issued design IDs, all 100 code
+hashes, all 200 QR images and browser storage compatible. Current browser checks
+reconfirm renamed four-find progression, reload persistence, repeat handling and
+reset. The newsletter link reaches the existing signup form; provider acceptance
+and email delivery were not tested with a real subscription.

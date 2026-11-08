@@ -37,7 +37,7 @@ for(const tag of inventory.tags){
   const image=await QRCode.toBuffer(url,opts);await writeFile(path.join(out,'qr',tag.serial+'.png'),image,{mode:0o600});
   const png=PNG.sync.read(image),scan=jsQR(new Uint8ClampedArray(png.data),png.width,png.height);assert.equal(scan?.data,url,'Independent QR decode failed for '+tag.serial);decoded++;modules.add(QRCode.create(url,opts).modules.size);
   manifest.tags.push({hash:await tagHash(tag.code),species:tag.species});
-  sheets.push(`<article><strong>F&amp;F HOLIDAY HUNT</strong><span>${species.name} · ${tag.serial}</span><img src="qr/${tag.serial}.svg" alt="QR code for ${species.name}"><code>${tag.code}</code><b>Take one. Leave the rest.</b><small>Scan to check your find. Bring the physical keychain to Friends &amp; Foils to enter. No purchase necessary.</small></article>`);
+  sheets.push(`<article><strong>F&amp;F HOLIDAY HUNT</strong><span>${species.name} energy · ${tag.serial}</span><img src="qr/${tag.serial}.svg" alt="QR code for ${species.name} energy"><code>${tag.code}</code><b>Take one. Leave the rest.</b><small>Scan to check your find. Bring the physical keychain to Friends &amp; Foils to enter. No purchase necessary.</small></article>`);
 }
 for(const species of SPECIES){
   const tag=inventory.tags.find(t=>t.species===species.id),url='https://friendsandfoils.com/holiday-hunt/found/#'+tag.code;

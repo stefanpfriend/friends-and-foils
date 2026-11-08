@@ -92,3 +92,13 @@ inventory, QR print kit or counter ledger.
 
 See [build, verification and print handoff](docs/holiday-hunt-build.md).
 Run the small behavior checks with `node --test tests/holiday-hunt.test.mjs`.
+
+
+## Festive energy presentation
+
+The hunt designs are Electric, Grass, Fire and Water energies. Campaign styling
+uses red alongside the forest green. The live teaser tiles introduce designs;
+they are not the optional scan checklist in the full draft.
+Display names changed only: issued QR codes, legacy design IDs, inventory
+hashes and browser storage stay compatible. Regenerate print labels from the
+existing private master inventory; keep any existing counter ledger.

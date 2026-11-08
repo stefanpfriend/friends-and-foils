@@ -1,8 +1,8 @@
 export const SPECIES = Object.freeze([
-  {id:'pikachu',name:'Pikachu',prefix:'P',motif:'bolt',tone:'electric'},
-  {id:'bulbasaur',name:'Bulbasaur',prefix:'B',motif:'leaf',tone:'leaf'},
-  {id:'charmander',name:'Charmander',prefix:'C',motif:'flame',tone:'fire'},
-  {id:'squirtle',name:'Squirtle',prefix:'S',motif:'drop',tone:'water'},
+  {id:'pikachu',name:'Electric',prefix:'P',motif:'bolt',tone:'electric'},
+  {id:'bulbasaur',name:'Grass',prefix:'B',motif:'leaf',tone:'leaf'},
+  {id:'charmander',name:'Fire',prefix:'C',motif:'flame',tone:'fire'},
+  {id:'squirtle',name:'Water',prefix:'S',motif:'drop',tone:'water'},
 ]);
 export const PASSPORT_KEY='ff-holiday-hunt-2026:passport-v1';
 const known=new Set(SPECIES.map(s=>s.id));

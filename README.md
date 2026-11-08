@@ -77,3 +77,10 @@ The prize offer, entry mechanics, rules draft, code lookup manifest and browser
 passport remain in draft PR #9. Do not publish those until the outstanding
 promotion decisions and final rules review are complete. This teaser uses only
 the existing shared script; it has no entry form or hunt data collection.
+
+
+## Festive energy presentation
+
+The hunt designs are Electric, Grass, Fire and Water energies. Campaign styling
+uses red alongside the forest green. The live teaser tiles introduce designs;
+they are not the optional scan checklist in the full draft.

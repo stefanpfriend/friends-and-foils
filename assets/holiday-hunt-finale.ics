@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Friends and Foils//Holiday Hunt 2026//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:holiday-hunt-finale-2026@friendsandfoils.com
+DTSTAMP:20261107T000000Z
+DTSTART:20261210T000000Z
+DTEND:20261210T023000Z
+SUMMARY:F&F Holiday Hunt Finale and Trade Night
+LOCATION:Friends & Foils\, 1300 South Blvd\, Suite D\, Charlotte\, NC
+DESCRIPTION:Bring your Holiday Hunt keychains for turn-ins\, spins and trad
+ e night.\nSee https://friendsandfoils.com/holiday-hunt/ for final rules an
+ d deadlines.
+URL:https://friendsandfoils.com/holiday-hunt/
+END:VEVENT
+END:VCALENDAR

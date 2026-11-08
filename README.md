@@ -78,9 +78,27 @@ passport remain in draft PR #9. Do not publish those until the outstanding
 promotion decisions and final rules review are complete. This teaser uses only
 the existing shared script; it has no entry form or hunt data collection.
 
+## Holiday Hunt (build preview)
+
+`/holiday-hunt/` contains the holiday campaign, `/holiday-hunt/found/#CODE` checks a
+tag, and `/holiday-hunt/rules/` contains the updated rules draft. Home and Events
+link to it. The checklist is browser-local; entries and household spins are checked
+at the physical counter, not registered online.
+
+The prize/sponsor/contact fields are still highlighted for confirmation. Production currently serves the dates-only teaser. Keep this branch’s full
+promotion out of production until the final rules and existing giveaway launch
+requirements above are resolved. Do not commit or publish the private master code
+inventory, QR print kit or counter ledger.
+
+See [build, verification and print handoff](docs/holiday-hunt-build.md).
+Run the small behavior checks with `node --test tests/holiday-hunt.test.mjs`.
+
 
 ## Festive energy presentation
 
 The hunt designs are Electric, Grass, Fire and Water energies. Campaign styling
 uses red alongside the forest green. The live teaser tiles introduce designs;
 they are not the optional scan checklist in the full draft.
+Display names changed only: issued QR codes, legacy design IDs, inventory
+hashes and browser storage stay compatible. Regenerate print labels from the
+existing private master inventory; keep any existing counter ledger.

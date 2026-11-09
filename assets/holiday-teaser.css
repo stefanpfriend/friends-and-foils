@@ -1,0 +1,197 @@
+/* The coming-soon treatment is scoped to the two Holiday Hunt routes. */
+.holiday-teaser {
+  --teaser-cream: #fff2d8;
+  --teaser-gold: #f5ca82;
+  --teaser-green: #172d23;
+  --teaser-muted: #ddd9c1;
+}
+
+/* Keep the skip link available on keyboard focus without shifting the page. */
+.holiday-teaser .hunt-skip {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 50;
+  padding: 10px 14px;
+  background: var(--teaser-cream);
+  color: var(--teaser-green);
+  clip-path: inset(50%);
+}
+
+.holiday-teaser .hunt-skip:focus {
+  clip-path: none;
+}
+
+.teaser-hero {
+  padding: clamp(42px, 7vw, 102px) 0;
+  background:
+    radial-gradient(ellipse at 75% 48%, #754437 0, transparent 55%),
+    linear-gradient(140deg, #442322, #222b23 72%);
+  color: var(--teaser-cream);
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 68px);
+}
+
+.teaser-copy .tag {
+  color: var(--teaser-gold);
+  letter-spacing: .1em;
+}
+
+.teaser-copy h1 {
+  margin: 12px 0 22px;
+  font-size: clamp(49px, 7.2vw, 96px);
+  line-height: .98;
+  letter-spacing: -.065em;
+}
+
+.teaser-copy h1 em {
+  color: var(--teaser-gold);
+  font-style: normal;
+}
+
+.teaser-dates {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 12px;
+  margin: 0 0 20px;
+}
+
+.teaser-dates p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 14px 16px;
+  background: #202c24;
+  border: 1px solid #997451;
+  border-radius: 14px;
+}
+
+.teaser-dates span {
+  color: var(--teaser-muted);
+  font-size: .875rem;
+  line-height: 1.35;
+}
+
+.teaser-dates strong {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.05;
+}
+
+.teaser-link {
+  display: inline-block;
+  color: var(--teaser-gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.teaser-link:focus-visible,
+.teaser-directions .cta:focus-visible {
+  outline: 2px solid var(--teaser-cream);
+  outline-offset: 4px;
+}
+
+.teaser-scene {
+  width: 100%;
+  max-width: 460px;
+  justify-self: center;
+  overflow: hidden;
+  border: 1px solid #a37a55;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at 50% 30%, #42533a, #192e25 72%);
+  box-shadow: 0 24px 60px #130e1280, inset 0 0 0 6px #f6cf8b0b;
+}
+
+.teaser-scene svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.teaser-tree {
+  transform-origin: 50% 85.6%;
+  transform-box: view-box;
+}
+
+.teaser-grass {
+  transform-origin: 50% 85.6%;
+  transform-box: view-box;
+}
+
+.teaser-visit {
+  padding-top: clamp(26px, 5vw, 56px);
+  padding-bottom: clamp(26px, 5vw, 56px);
+  scroll-margin-top: 88px;
+}
+
+.teaser-visit-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: clamp(18px, 4vw, 38px);
+  border: 1px solid #536d55;
+  border-radius: 18px;
+  background: var(--teaser-green);
+  color: var(--teaser-cream);
+}
+
+.teaser-visit-panel h2 {
+  margin: 0 0 8px;
+}
+
+.teaser-visit-panel address {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.teaser-visit-panel p {
+  margin: 8px 0 0;
+  color: var(--teaser-muted);
+}
+
+.teaser-directions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+}
+
+@media (max-width: 680px) {
+  .teaser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teaser-visit-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .teaser-tree {
+    animation: holiday-tree-shake 1.4s ease-in-out 3;
+  }
+
+  .teaser-grass {
+    animation: holiday-grass-rustle 1.4s ease-in-out 3;
+  }
+}
+
+@keyframes holiday-tree-shake {
+  0%, 35%, 100% { transform: rotate(0); }
+  8%, 24% { transform: rotate(-3deg); }
+  16% { transform: rotate(3deg); }
+}
+
+@keyframes holiday-grass-rustle {
+  0%, 46%, 100% { transform: skewX(0); }
+  12%, 34% { transform: skewX(4deg); }
+  23% { transform: skewX(-4deg); }
+}

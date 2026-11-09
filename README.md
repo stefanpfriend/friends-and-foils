@@ -69,18 +69,11 @@ resolve.
 
 ## Holiday Hunt teaser
 
-`/holiday-hunt/` announces the Nov 27–Dec 9, 2026 dates and Dec 9 trade-night finale.
-Home and Events link to the teaser. `/holiday-hunt/found/` displays the same
-coming-soon information for early QR scans; it does not validate a code.
+The Holiday Hunt and early QR landing pages show the Nov 27 opening, the Dec 9
+trade-night finale from 7–9:30 PM ET, and shop directions. The decorative tree
+shakes briefly on load and stays still when reduced motion is enabled. Home and
+Events link to the teaser.
 
-The prize offer, entry mechanics, rules draft, code lookup manifest and browser
-passport remain in draft PR #9. Do not publish those until the outstanding
-promotion decisions and final rules review are complete. This teaser uses only
-the existing shared script; it has no entry form or hunt data collection.
-
-
-## Festive energy presentation
-
-The hunt designs are Electric, Grass, Fire and Water energies. Campaign styling
-uses red alongside the forest green. The live teaser tiles introduce designs;
-they are not the optional scan checklist in the full draft.
+The full hunt reveal, official rules, and QR checker remain in draft PR #9.
+Keep those separate until the promotion decisions and final rules review are
+complete.

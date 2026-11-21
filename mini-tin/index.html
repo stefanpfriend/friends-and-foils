@@ -1,3 +1,82 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>The Mini Tin Club | Friends &amp; Foils</title>
 <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background-color:#b57bff;background-image:linear-gradient(110deg,#ff4d9d 8%,#b57bff 28%,#46e0ff 48%,#9cff6b 68%,#ffd24d 88%);background-size:220% 100%;animation:mini-tin-foil 7s ease-in-out infinite;color:#181711;font:1rem/1.55 system-ui,sans-serif}main{box-sizing:border-box;width:min(31rem,calc(100% - 2rem));margin:1rem;padding:clamp(1.5rem,5vw,3rem);border:2px solid;border-radius:1.5rem;background:#fff;box-shadow:.35rem .35rem 0 #181711}h1{font-size:clamp(2.4rem,9vw,3.9rem);line-height:1.02;margin:.45rem 0 1rem;letter-spacing:-.06em}h2{font-size:1.25rem;margin:0}.eyebrow{margin:0;font-size:.77rem;letter-spacing:.15em;font-weight:750}.pull{padding:1rem 1.2rem;background:#e7f9ff;border-radius:1rem;margin:1.5rem 0}.pull p{margin:.3rem 0 0}a{color:inherit;text-underline-offset:.2em}@keyframes mini-tin-foil{0%,100%{background-position:0% 0}50%{background-position:100% 0}}@media(prefers-reduced-motion:reduce){body{animation:none;background-position:50% 0}}</style>
-<main><p class="eyebrow">A LITTLE TIN. A LITTLE SECRET.</p><h1>The Mini Tin Club</h1><p>You found the mini-tin secret! Thanks for celebrating with us. We hope you pulled something good.</p><section class="pull"><h2>What did you pull?</h2><p>Show a friend your favorite card and see what they found in their tin.</p></section><footer><a href="/">Visit Friends &amp; Foils</a></footer></main></html>
+<main><p class="eyebrow">A LITTLE TIN. A LITTLE SECRET.</p><h1>The Mini Tin Club</h1><p>You found the mini-tin secret! Thanks for celebrating with us. We hope you pulled something good.</p><section class="pull"><h2>What did you pull?</h2><p>Show a friend your favorite card and see what they found in their tin.</p></section><footer><a href="/">Visit Friends &amp; Foils</a></footer></main>
+<style>
+.tin-flight{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:10;isolation:isolate}
+.tin-bird{position:absolute;top:clamp(-5px,6vh,62px);left:0;width:clamp(142px,23vw,310px);height:auto;translate:-120% 0;animation:tin-cross 6.3s linear 4s both;will-change:translate}
+.tin-wing{transform-box:view-box;transform-origin:140px 91px;animation:tin-flap 1.65s ease-in-out 4s 4 alternate}
+.tin-far{animation-name:tin-flap-far;transform-origin:159px 80px}
+@keyframes tin-cross{0%{translate:-115% 10px;rotate:-7deg}22%{translate:13vw 0;rotate:-3deg}48%{translate:43vw -17px;rotate:2deg}74%{translate:73vw 1px;rotate:0deg}100%{translate:108vw -9px;rotate:-4deg}}
+@keyframes tin-flap{0%{transform:rotate(0) scaleY(1)}42%{transform:rotate(7deg) scaleY(.7)}100%{transform:rotate(21deg) scaleY(-.33)}}
+@keyframes tin-flap-far{0%{transform:rotate(0) scaleY(1)}42%{transform:rotate(-4deg) scaleY(.6)}100%{transform:rotate(-17deg) scaleY(-.34)}}
+.tin-glint{position:absolute;width:var(--size);aspect-ratio:1;left:var(--x);top:var(--y);color:#ffdf86;background:currentColor;opacity:0;border-radius:50%;box-shadow:0 0 5px #fff0a6;animation:tin-drift var(--life) ease-out var(--delay) both}
+.tin-glint:nth-child(5n){border-radius:0;clip-path:polygon(50% 0,59% 39%,100% 50%,59% 60%,50% 100%,41% 60%,0 50%,41% 40%);background:#ffefb1}
+@keyframes tin-drift{0%{opacity:0;transform:translate(0,0) scale(.55)}12%{opacity:.92}57%{opacity:.65}100%{opacity:0;transform:translate(var(--drift),var(--fall)) scale(.24)}}
+@media(max-height:450px){.tin-bird{top:-5px;width:clamp(124px,20vw,200px)}}
+@media(prefers-reduced-motion:reduce){.tin-flight{display:none}}
+</style>
+<div class="tin-flight" aria-hidden="true">
+<svg class="tin-bird" viewBox="0 0 244 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#4d231c" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round">
+<!-- Far primaries, shaded below the body. -->
+<g class="tin-wing tin-far">
+<path fill="#821d27" d="M145 86c-7-17-17-27-30-37-9-7-11-18-9-29 10 10 19 12 30 18-5-10-3-20 2-27 4 13 14 19 21 26-2-13 2-22 9-29 0 17 11 24 15 39 5 15-4 31-19 40z"/>
+<path fill="#c74933" d="M148 79c-7-17-21-25-28-37 10 6 26 13 34 30-10-18-14-30-15-37 11 9 21 20 25 35l7-18 7 12-13 18z"/>
+<path fill="#186f51" d="M107 20c7 8 13 11 20 14l-13 0c-6-4-8-9-7-14zm31-9c2 8 5 14 11 19l-10-3c-3-5-3-11-1-16zm30-3c0 10 5 17 9 23l-9-4c-3-5-2-13 0-19z"/>
+</g>
+<!-- Layered ribbon-tail: gold edges, bone-white flare, warm cel shadows. -->
+<path fill="#9f3b2a" d="M130 100C89 117 51 121 19 140c9-13 22-24 43-35C40 112 19 111 4 110c21-7 39-18 57-26C41 83 25 77 14 67c24 6 47 2 65 10l49 5z"/>
+<path fill="#ed9e3c" d="M122 91C81 93 55 101 6 109c22-8 37-20 57-27-22-2-38-8-46-13 23 3 47 4 71 11z"/>
+<path fill="#fff3c4" d="M119 90c-30 2-68 6-97 16 19-9 29-17 49-21-24-4-35-8-45-13 31 7 58 7 93 18z"/>
+<path fill="#f2bb50" d="M122 98c-34 9-64 17-102 39 13-16 36-28 65-36-22 6-40 6-57 6 38-7 61-15 94-9z"/>
+<path fill="#fff0a9" d="M114 101c-23 7-53 14-80 29 18-12 39-24 80-29z"/>
+<!-- Cambered body and scalloped cream breast. -->
+<path fill="#a8242c" d="M92 91c20-6 29-14 54-18 15-2 28 3 41-2 8-3 10-14 19-18 10-4 20 0 22 8l-7 14c-4 6-13 7-18 11-7 7-11 20-28 25-21 7-49 1-77-12l-13-2z"/>
+<path fill="#ec563d" stroke="none" d="M107 91c18-7 34-17 58-13 12 2 31-2 35-14 7-8 17-10 25-4l-10 12c-15 5-20 29-40 32-15 1-54-3-68-13z"/>
+<path fill="#f6e6b6" d="M194 81c-7 1-10 11-23 13-7 1-12-2-17-1l5 6-9 1 10 5-7 2 11 6c24 0 36-17 40-26z"/>
+<path fill="#ceaa79" stroke="none" d="M204 87c-5 10-16 23-40 26l-6-4c15-1 30-9 33-16z"/>
+<path fill="#edb14a" d="M159 106c-3 7-13 12-21 13l2-4-6-1 8-4-4-3 13 1z"/>
+<path fill="#f7c660" d="M180 108c-2 7-10 13-21 14l2-4-6 1 2-5-4-2 13-2z"/>
+<!-- Gold crest, mask, beak and small dark eye. -->
+<path fill="#e59c3b" d="M202 60c0-9-3-15-7-22 8 3 13 7 17 14-1-8 2-16 6-21 1 7 3 15 3 20 3-4 7-7 12-9-3 7-6 13-10 17z"/>
+<path fill="#ffe185" stroke="none" d="M200 42c5 4 9 8 11 14l-5 1zm17-6c0 7 1 14 0 20l-4 1c0-8 1-15 4-21z"/>
+<path fill="#fff1c7" d="M210 63c6-4 13-3 17 1l-4 7c-5-5-10-2-15 0z"/>
+<path fill="#f6be54" d="M226 64c6-1 12 1 15 5l-9 3-8 2-3-4z"/>
+<path d="m226 70 10-1" stroke="#ad6329" stroke-width="1"/>
+<path d="M214 65c2-1 5-1 7 0" stroke="#74312b" stroke-width="1.1"/>
+<ellipse fill="#261b21" stroke="none" cx="218.5" cy="66" rx="1.55" ry="1.8"/>
+<!-- Near wing: individually notched primaries, green end bands and gold coverts. -->
+<g class="tin-wing">
+<path fill="#aa2930" d="M153 93C137 96 120 89 108 82 98 75 87 74 73 67c-9-5-17-12-21-21 10 4 20 5 31 6-15-9-26-21-30-33 11 7 25 12 37 14C76 21 72 11 73 3c13 7 24 17 37 24-5-8-5-17-3-24 10 8 17 19 22 29 3-6 7-9 12-11 4 17 6 25 16 35 14 15 13 33-4 37z"/>
+<path fill="#e84b32" stroke="none" d="M155 86c-16 4-35-6-47-13L83 62c20 3 43 13 50 12C119 65 98 62 82 46c24 7 43 19 60 28-12-12-32-25-43-44 14 7 30 25 44 32l-9-24 18 20c11 12 12 24 3 28z"/>
+<path fill="#267655" d="M52 46c10 4 20 5 31 6l-7 9c-10-2-17-7-24-15zm1-27c11 7 25 12 37 14l-11 8C66 35 57 26 53 19zm20-16c13 7 24 17 37 24l-11 2C87 24 77 15 73 3zm34 0c10 8 17 19 22 29l-11-5c-5-7-9-14-11-24z"/>
+<path fill="#65ad68" stroke="none" d="M59 50c7 3 14 3 20 4l-3 3zm3-24c7 4 15 7 23 8l-5 3zm19-15c9 5 17 13 24 16l-5 1zm31-1c6 5 10 12 14 19l-6-4z"/>
+<path fill="#fcb55a" stroke="none" d="M158 77c-10-8-19-17-31-25l8 14-21-12 13 13-19-4 25 14c-10-3-15-3-21-4 9 7 27 13 36 13 7 0 10-2 10-9z"/>
+<path d="M87 47c12 7 25 12 34 19m-18-30c9 11 21 17 28 25m-54 3c11 5 22 6 33 11" stroke="#97322a" stroke-width="1"/>
+<path d="M136 77c6 4 11 5 15 4" stroke="#fff0a0" stroke-width="1.25"/>
+</g>
+</g>
+</svg>
+</div>
+<script>
+(()=>{
+  const layer=document.querySelector('.tin-flight');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const height=innerHeight,width=innerWidth;
+  const narrow=height<=450;
+  const tipY=narrow?43:Math.min(62,height*.06)+Math.min(70,Math.max(35,width*.051));
+  let seed=41917;
+  const rand=()=>((seed=(Math.imul(1664525,seed)+1013904223)>>>0)/4294967296);
+  for(let i=0;i<27;i++){
+    const x=(i+.5)/27;
+    const t=(x*width+Math.max(85,width*.12))/(width*1.08+Math.max(160,width*.26));
+    const el=document.createElement('i');
+    el.className='tin-glint';
+    const vars={x:(x*100)+'%',y:(tipY+rand()*18-9)+'px',delay:(4+t*6.3+.18+rand()*.2)+'s',life:(1.5+rand()*1.7)+'s',size:(i%5===4?8:2+rand()*3)+'px',drift:(rand()*23-8)+'px',fall:(32+rand()*60)+'px'};
+    for(const [k,v] of Object.entries(vars))el.style.setProperty('--'+k,v);
+    layer.append(el);
+  }
+  setTimeout(()=>layer.remove(),13700);
+})();
+</script>
+</html>
